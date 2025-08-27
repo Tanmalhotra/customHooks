@@ -1,46 +1,98 @@
-# Getting Started with Create React App
+🧭 Adventure Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A small React + TypeScript playground showcasing custom hooks (useCounter, useBoolean, useCycle, useClickAnywhere) inside a fun interactive adventure theme.
 
-## Available Scripts
+Instead of boring hook demos, the hooks power a mini game-like dashboard:
 
-In the project directory, you can run:
+⭐ Crystals (useCounter) → Collect or spend crystals as your treasure.
 
-### `npm start`
+🌙 Day/Night Mode (useBoolean) → Toggle between day and night worlds.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+🌲🏜️🌊⛰️ Environments (useCycle) → Travel across Forest, Desert, Ocean, and Mountains.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+👣 Exploration Map (useClickAnywhere) → Every click anywhere on the page moves you forward on your journey.
 
-### `npm test`
+🚀 Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+useCounter → Counts your crystals, with +, -, and reset.
 
-### `npm run build`
+useBoolean → Toggles day/night mode.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+useCycle → Cycles through environments with unique emoji and descriptions.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+useClickAnywhere → Tracks global clicks and turns them into steps on a map.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🛠️ Installation & Running
 
-### `npm run eject`
+Clone the repo and install dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+git clone https://github.com/your-username/adventure-dashboard.git
+cd adventure-dashboard
+npm install
+npm start
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Or open directly in GitHub Codespaces → run npm start.
+The dev server will open in your browser.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+📂 Project Structure
+src/
+ ├── hooks/
+ │    ├── useBoolean.ts
+ │    ├── useClickAnywhere.ts
+ │    ├── useCounter.ts
+ │    └── useCycle.ts
+ ├── App.tsx        # main interactive dashboard
+ ├── App.css        # styles
+ └── index.tsx
 
-## Learn More
+🎮 How to Play
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Collect Crystals → Press + Collect to gather treasures.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Spend or Reset → Use crystals wisely.
+
+Travel Environments → Click Travel to move between Forest, Desert, Ocean, Mountain.
+
+Day/Night Mode → Toggle 🌙/☀️ to change world atmosphere.
+
+Explore Map → Click anywhere on the page to walk forward on the map.
+
+Each step adds 👣 footprints.
+
+Reach the end of the path → start a new journey.
+
+🔮 Demo Preview
+
+Forest 🌲 → “Mysterious trees full of hidden life.”
+
+Desert 🏜️ → “Endless dunes under a scorching sun.”
+
+Ocean 🌊 → “Waves, corals, and deep secrets.”
+
+Mountain ⛰️ → “High peaks with fresh cold air.”
+
+🧩 Hooks API
+useCounter(initialValue?: number)
+
+Manages numeric state with increment, decrement, reset.
+
+useBoolean(initialValue?: boolean)
+
+Boolean toggle with toggle, setTrue, setFalse.
+
+useCycle(...values)
+
+Cycles through a list of values, returning [current, next].
+
+useClickAnywhere(handler)
+
+Calls handler whenever a click happens anywhere in the document.
+
+✨ Future Ideas
+
+Different map styles per environment (green forest path, yellow desert trail, etc).
+
+Simple animations (bouncing crystals, fading environments).
+
+Save progress in localStorage.
