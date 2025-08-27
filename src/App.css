@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Themes */
+.app.day {
+  background: #fdfdfd;
+  color: #222;
+}
+
+.app.night {
+  background: #1a1a1a;
+  color: #eee;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  background: #0077ff;
+  color: white;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+.toggle-btn:hover {
+  background: #005ad1;
+}
+
+/* Cards */
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.app.day .card {
+  background: #fff;
+}
+
+.app.night .card {
+  background: #2a2a2a;
+}
+
+/* Environment */
+.environment-card h2 {
+  font-size: 1.8rem;
+}
+.environment-card p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0 1rem;
+}
+
+/* Crystals */
+.crystals {
+  font-size: 2rem;
+  margin: 1rem 0;
+  min-height: 2.5rem;
+}
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Steps */
+.steps {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  min-height: 2.5rem;
+  word-wrap: break-word;
+}
+/* Same global + header + card styles as before */
+
+/* Crystals */
+.crystals {
+  font-size: 2rem;
+  margin: 1rem 0;
+  min-height: 2.5rem;
+}
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Map Progress */
+.map {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin: 1rem 0;
+}
+
+.tile {
+  width: 24px;
+  height: 24px;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 24px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.tile.active {
+  color: #222;
+}
+
+.app.night .tile.active {
+  color: #eee;
+}
